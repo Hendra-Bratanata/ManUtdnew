@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Manchester United</string>
+    <string name="national">nationality\t\t\t\t:</string>
+    <string name="player_name_t">Player Name\t:</string>
+    <string name="playername">playername</string>
+    <string name="date_of_birth_t">Date Of Birth\t:</string>
+    <string name="date">Date</string>
+    <string name="nationality_t_t_t">Nationality\t\t\t:</string>
+    <string name="nationality">nationality</string>
+    <string name="weight_t_t_t_t_t_t">Weight\t\t\t\t\t\t:</string>
+    <string name="weight">weight</string>
+    <string name="height">Height</string>
+    <string name="height_t_t_t_t_t_t">Height\t\t\t\t\t\t:</string>
+    <string name="twitter_t_t_t_t_t_t">Twitter\t\t\t\t\t\t:</string>
+    <string name="twiter">twiter</string>
+    <string name="instagram_t_t_t">Instagram\t\t\t:</string>
+    <string name="instagram">Instagram</string>
+</resources>

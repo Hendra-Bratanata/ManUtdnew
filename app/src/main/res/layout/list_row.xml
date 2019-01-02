@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_photo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="Player Name\t:" />
+
+            <TextView
+                android:id="@+id/tv_namePlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="\t\t\tplayer name"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_born"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_namePlayer"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="Player Born\t:" />
+
+            <TextView
+                android:id="@+id/tv_playerBorn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_born"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="\t\t\tPlayer Born"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_playerBorn"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="Player Sign In\t:" />
+
+            <TextView
+                android:id="@+id/tv_playerSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_sign"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="\t\t\tplayer sign"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_playerSign"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="Player Position\t:" />
+
+            <TextView
+                android:id="@+id/tv_playerPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_position"
+                android:layout_toRightOf="@id/img_photo"
+                android:text="\t\t\tplayer position"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
