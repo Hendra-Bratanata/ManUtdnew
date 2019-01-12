@@ -57,10 +57,31 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
 
     @Override
-    public void showData(ArrayList<PlayerItem> player) {
+    public void showData(final ArrayList<PlayerItem> player) {
         adapter.setPlayerItemList(player);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+            @Override
+            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                Intent intent = new Intent(MainActivity.this,Detail.class);
+                PlayerItem playerData = new PlayerItem(player.get(position).getStrPlayer(),
+                        player.get(position).getDateBorn(),
+                        player.get(position).getDateSigned(),
+                        player.get(position).getStrPosition(),
+                        player.get(position).getStrThumb(),
+                        player.get(position).getStrNationality(),
+                        player.get(position).getStrBirthLocation(),
+                        player.get(position).getStrDescriptionEN(),
+                        player.get(position).getStrHeight(),
+                        player.get(position).getStrWeight(),
+                        player.get(position).getStrTwitter(),
+                        player.get(position).getStrInstagram());
+
+                intent.putExtra("player",playerData);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
