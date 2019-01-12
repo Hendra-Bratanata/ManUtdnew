@@ -1,11 +1,11 @@
-package com.iamjue.manchesterunited;
+package com.iamjue.manchesterunited.MODEL;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PlayerItem implements Parcelable {
-    private String strPlayer, dateBorn, dateSigned, strPosition, strThumb, strNationality, strBirthLocation;
-    private String strDescriptionEN, strHeight, strWeight, strTwitter, strInstagram;
+    String strPlayer, dateBorn, dateSigned, strPosition, strThumb, strNationality, strBirthLocation;
+    String strDescriptionEN, strHeight, strWeight, strTwitter, strInstagram;
 
 
     public PlayerItem(String strPlayer, String dateBorn, String dateSigned, String strPosition, String strThumb, String strNationality,
@@ -26,7 +26,7 @@ public class PlayerItem implements Parcelable {
 
     }
 
-    protected PlayerItem(Parcel in) {
+    public PlayerItem(Parcel in) {
         strPlayer = in.readString();
         dateBorn = in.readString();
         dateSigned = in.readString();
@@ -53,7 +53,7 @@ public class PlayerItem implements Parcelable {
         }
     };
 
-    String getStrPlayer() {
+    public String getStrPlayer() {
         return strPlayer;
     }
 
@@ -61,7 +61,7 @@ public class PlayerItem implements Parcelable {
         this.strPlayer = strPlayer;
     }
 
-    String getDateBorn() {
+    public String getDateBorn() {
         return dateBorn;
     }
 
@@ -69,7 +69,7 @@ public class PlayerItem implements Parcelable {
         this.dateBorn = dateBorn;
     }
 
-    String getDateSigned() {
+    public String getDateSigned() {
         return dateSigned;
     }
 
@@ -77,7 +77,7 @@ public class PlayerItem implements Parcelable {
         this.dateSigned = dateSigned;
     }
 
-    String getStrPosition() {
+    public String getStrPosition() {
         return strPosition;
     }
 
@@ -85,7 +85,7 @@ public class PlayerItem implements Parcelable {
         this.strPosition = strPosition;
     }
 
-    String getStrThumb() {
+    public String getStrThumb() {
         return strThumb;
     }
 
@@ -93,7 +93,7 @@ public class PlayerItem implements Parcelable {
         this.strThumb = strThumb;
     }
 
-    String getStrNationality() {
+    public String getStrNationality() {
         return strNationality;
     }
 
@@ -101,7 +101,7 @@ public class PlayerItem implements Parcelable {
         this.strNationality = strNationality;
     }
 
-    String getStrBirthLocation() {
+    public String getStrBirthLocation() {
         return strBirthLocation;
     }
 
@@ -109,7 +109,7 @@ public class PlayerItem implements Parcelable {
         this.strBirthLocation = strBirthLocation;
     }
 
-    String getStrDescriptionEN() {
+    public String getStrDescriptionEN() {
         return strDescriptionEN;
     }
 
@@ -117,7 +117,7 @@ public class PlayerItem implements Parcelable {
         this.strDescriptionEN = strDescriptionEN;
     }
 
-    String getStrHeight() {
+    public String getStrHeight() {
         return strHeight;
     }
 
@@ -125,7 +125,7 @@ public class PlayerItem implements Parcelable {
         this.strHeight = strHeight;
     }
 
-    String getStrWeight() {
+    public String getStrWeight() {
         return strWeight;
     }
 
@@ -133,7 +133,7 @@ public class PlayerItem implements Parcelable {
         this.strWeight = strWeight;
     }
 
-    String getStrTwitter() {
+    public String getStrTwitter() {
         return strTwitter;
     }
 
@@ -141,7 +141,7 @@ public class PlayerItem implements Parcelable {
         this.strTwitter = strTwitter;
     }
 
-    String getStrInstagram() {
+    public String getStrInstagram() {
         return strInstagram;
     }
 

@@ -1,16 +1,12 @@
 package com.iamjue.manchesterunited;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
-import java.util.List;
+import com.iamjue.manchesterunited.MODEL.PlayerItem;
 
 
 public class Detail extends AppCompatActivity {

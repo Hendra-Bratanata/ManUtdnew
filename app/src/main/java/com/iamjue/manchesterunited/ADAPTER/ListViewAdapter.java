@@ -1,4 +1,4 @@
-package com.iamjue.manchesterunited;
+package com.iamjue.manchesterunited.ADAPTER;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,15 +9,23 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.iamjue.manchesterunited.MODEL.PlayerItem;
+import com.iamjue.manchesterunited.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> {
+    private ArrayList<PlayerItem> playerItemList;
+    private Context context;
+
+    public ListViewAdapter(Context c) {
+        this.context = c;
+    }
+
     public ArrayList<PlayerItem> getPlayerItemList() {
         return playerItemList;
     }
@@ -26,24 +34,17 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         this.playerItemList = playerItemList;
     }
 
-    private ArrayList<PlayerItem> playerItemList;
-    private Context context;
-
-    public ListViewAdapter(Context c) {
-    this.context = c;
-    }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_row,viewGroup,false);
-        return  new ViewHolder(v);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_row, viewGroup, false);
+        return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-       Glide.with(context).load(getPlayerItemList().get(i).getStrThumb()).into(viewHolder.imgPlayer);
-       viewHolder.tvNamePlayer.setText(String.format("\t\t\t%s", getPlayerItemList().get(i).getStrPlayer()));
+        Glide.with(context).load(getPlayerItemList().get(i).getStrThumb()).into(viewHolder.imgPlayer);
+        viewHolder.tvNamePlayer.setText(String.format("\t\t\t%s", getPlayerItemList().get(i).getStrPlayer()));
         viewHolder.tvBirth.setText(String.format("\t\t\t%s", getPlayerItemList().get(i).getDateBorn()));
         viewHolder.tvSign.setText(String.format("\t\t\t%s", getPlayerItemList().get(i).getDateSigned()));
         viewHolder.tvPosition.setText(String.format("\t\t\t%s", getPlayerItemList().get(i).getStrPosition()));
@@ -74,7 +75,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this, itemView);
         }
     }
 }
